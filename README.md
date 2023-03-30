@@ -4,7 +4,9 @@
 
 ---
 
-这是一个简单的 Python 程序，用于获取多个 OneDrive 帐户的空间使用情况，并将其汇总输出到 Markdown 格式的文件中（其他纯文本格式也可以）
+自用小脚本，https://data.yanshiqwq.cn/README.md 这里的占用统计部分用到了
+
+一个简单的 Python 小脚本，用于获取多个 OneDrive 帐户的空间使用情况，并将其汇总输出到 Markdown 格式的文件中（其他纯文本格式也可以）
 
 该程序适用于需要监控多个 OneDrive 帐户使用情况的场景
 
@@ -93,4 +95,4 @@ refresh_tokens:
 
 ## 许可证
 
-本程序采用 BSD 许可证
+本程序采用 LGPL 许可证.
