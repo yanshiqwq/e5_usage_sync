@@ -1,0 +1,12 @@
+# OneDrive API 配置
+client_id: YOUR_CLIENT_ID_HERE
+client_secret: YOUR_CLIENT_SECRET_HERE
+
+# OneDrive 帐户刷新 token，可以添加多个 OneDrive 帐户
+refresh_tokens:
+  - name: account1_name
+    token: account1_refresh_token
+  - name: account2_name
+    token: account2_refresh_token
+  - name: account3_name
+    token: account3_refresh_token
