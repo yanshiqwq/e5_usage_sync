@@ -16,7 +16,7 @@ parser.add_argument('--input', default='template.md', help='指定输入文件�
 args = parser.parse_args()
 
 # 设置日志输出格式和级别
-logging.basicConfig(level=logging.INFO, datefmt='%Y-%m-%d_%H:%M:%S',
+logging.basicConfig(level=logging.INFO, datefmt='%Y/%m/%d %H:%M:%S',
                     format='[%(asctime)s] [%(levelname)s] %(message)s')
 
 # 从配置文件中读取用户配置
@@ -103,6 +103,7 @@ for item in refresh_tokens:
     usage_str = humanize.naturalsize(usage, binary=True, format="%.3f")
     # 将模板文件中的占位符替换为实际的 OneDrive 使用情况
     input_content = input_content.replace(f'[{name}_odusage]', usage_str)
+    input_content = input_content.replace(f'[{name}_odusage_urlenc]', usage_str.replace(" ", "%20"))
 
 # 将处理后的模板文件内容写入输出文件
 with open(args.output, 'w', encoding='utf-8') as output_file:
